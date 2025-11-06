@@ -86,6 +86,8 @@ class MainActivity : ComponentActivity() {
         navigateToSecondaryActivityButton.setOnClickListener {
             val intent = Intent(this, Colocviu1_1SecondaryActivity::class.java)
             intent.putExtra(INSTRUCTIONS, inputText.text.toString())
+            btnsPressed = 0
+            inputText.text = ""
             activityResultsLauncher.launch(intent)
         }
     }
